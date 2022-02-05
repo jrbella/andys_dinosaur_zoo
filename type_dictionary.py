@@ -1,4 +1,4 @@
-dinosaur_type_dictionary = {
+type_dictionary = {
     "Grassland" : [],
     "Mountain" : [],
     "Marine" : [],

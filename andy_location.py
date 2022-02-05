@@ -1,3 +1,6 @@
+from andy_player import Player
+from andy_dinosaur import Dinosaur
+
 class Location:
 
     def __init__(self, location_continent, location_region):
@@ -19,3 +22,12 @@ class Location:
         
         def set_location_region(self, new_region):
             self.location_region = new_region
+        
+
+        # custom game methods
+        def return_home(self, dino_team):
+            self.location_continent = "Home"
+            self.location_Region = "Home"
+            
+            for dino in dino_team:
+                

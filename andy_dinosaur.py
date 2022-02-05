@@ -1,3 +1,5 @@
+from combat_stats import CombatStats
+
 class Dinosaur:
 
     def __init__(self, scientific_name, custom_name, dino_type, classification, combat_stats):
@@ -5,7 +7,10 @@ class Dinosaur:
         self.custom_name = custom_name
         self.dino_type = dino_type
         self.classification = classification
-        self.combat_stats = combat_stats
+        # Dinosaurs get initialized with 0 stats
+        # Dinosaurs get updated from a dictionary depending on
+        # The dinosaur dictionary
+        self.combat_stats = CombatStats(0, 0, 0)
     
 
     # getters
