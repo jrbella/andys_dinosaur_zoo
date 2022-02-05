@@ -1,10 +1,15 @@
 class Player:
 
-    def __init__(self, name, dino_team, zoo):
+    def __init__(self, name, zoo, dino_team = [],  location = "Home"):
         self.name = name
-        self.dino_team = []
+        self.dino_team = dino_team
         self.zoo = zoo
+        self.location = location
 
+    def __repr__(self):
+        return("Player Name is " + self.name + " \nPlayer Zoo name is " 
+        + self.zoo.name + " \nPlayer Location is " + self.location)
+  
     # getters
 
     def get_name(self):

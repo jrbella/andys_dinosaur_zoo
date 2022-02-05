@@ -21,6 +21,12 @@ class CombatStats:
     
     def get_defense_number(self):
         return self.defense_number
-        
+
     def get_health_number(self):
         return self.health_number
+
+    # repr
+    def __repr__(self) -> str:
+        output = "Attack Number: " + self.attack_number + "\n Defense Number : " + self.defense_number 
+        + "\n Health Number : " + self.health_number
+        return output
