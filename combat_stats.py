@@ -1,9 +1,13 @@
 class CombatStats:
+    #instanced variable
+    max_health = 0
 
     def __init__(self, attack_number, defense_number, health_number):
         self.attack_number = attack_number
         self.defense_number = defense_number
         self.health_number = health_number
+        self.max_health = health_number
+
     
     # setters
     def set_attack_number(self, number):
@@ -30,3 +34,7 @@ class CombatStats:
         output = "Attack Number: " + self.attack_number + "\n Defense Number : " + self.defense_number 
         + "\n Health Number : " + self.health_number
         return output
+    
+    # set the max health
+    def set_max_health(self):
+        self.health_number = self.max_health

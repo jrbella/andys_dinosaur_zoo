@@ -8,7 +8,7 @@ class DinosaurType:
         return "The Dinosaur Type is : " + self.dino_type
         
     # getter
-    def get_type(self, type):
+    def get_type(self):
         return self.dino_type
 
     # setter

@@ -1,3 +1,5 @@
+from andy_dinosaur import Dinosaur
+
 class Player:
 
     def __init__(self, name, zoo, dino_team = [],  location = "Home"):
@@ -7,8 +9,11 @@ class Player:
         self.location = location
 
     def __repr__(self):
-        return("Player Name is " + self.name + " \nPlayer Zoo name is " 
-        + self.zoo.name + " \nPlayer Location is " + self.location)
+        return("player_name : " + self.name 
+        + "\nplayer_zoo : " + self.zoo.name
+        + "\nplayer_location : " + self.location
+        + "\nplayer_dino_team : " + str([dino.get_custom_name() for dino in self.dino_team ]))
+
   
     # getters
 
@@ -30,7 +35,7 @@ class Player:
     # add dino to team
 
     def add_dino(self, dinosaur):
-        if self.dino_team < 4:
+        if len(self.dino_team) < 4:
             self.dino_team.append(dinosaur)
         else:
             print("could not add dinosaur because the team is full")

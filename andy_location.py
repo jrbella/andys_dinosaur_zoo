@@ -3,7 +3,7 @@ from andy_dinosaur import Dinosaur
 
 class Location:
 
-    def __init__(self, location_continent, location_region):
+    def __init__(self, location_continent = "Home", location_region = "Home"):
         
         self.location_continent = location_continent
         self.location_region = location_region
@@ -25,9 +25,12 @@ class Location:
         
 
         # custom game methods
+
+        # input is player.dino_team
         def return_home(self, dino_team):
             self.location_continent = "Home"
             self.location_Region = "Home"
             
+            # dinosaur.combat_stats, this heals the dino team
             for dino in dino_team:
-                
+                dino.combat_stats.set_max_health()
