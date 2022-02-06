@@ -1,4 +1,4 @@
-from venv import create
+
 
 
 dinosaurs = {}
@@ -21,7 +21,8 @@ dino_list = [
     ["stegosaurus", "Stegosaurus", "Herbivore", "Grassland"],
     ["triceratops", "Triceratops", "Herbivore", "Grassland"],
     ["spinasaurus", "Spinasaurus", "Carnivore", "Marine"],
-    ["velociraptor", "Velociratpor", "Carnivore", "Mountain"]
+    ["velociraptor", "Velociratpor", "Carnivore", "Mountain"],
+    ["carnitaurus", "Carnitaurus", "Carnivore", "Grassland"]
 ]
 
 for dino in dino_list:
