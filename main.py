@@ -4,6 +4,7 @@ from andy_player import Player
 from andy_dinosaur_type import DinosaurType
 from location_dictionary import location_dictionary
 from combat_engine import *
+from dinosaur_dictionary import *
 
 
 
@@ -16,22 +17,51 @@ jeff = Player("Jeff", Zoo())
 # create zoo
 new_zoo = Zoo()
 
+
 # create a dinosaur
-T_Rex = Dinosaur("Tyranosaurus", "", DinosaurType("Mountain"), "Carnivore" )
-Richies_T_Rex = Dinosaur("Tyranosaurus", "Rich",DinosaurType("Mountain"), "Carnivore" )
+Richies_T_Rex = Dinosaur("",dinosaurs['tyrannosaurus']['scientific_name'], 
+dinosaurs['tyrannosaurus']['classification'], dinosaurs['tyrannosaurus']['dino_type'] )
+T_Rex = Dinosaur("",dinosaurs['tyrannosaurus']['scientific_name'], 
+dinosaurs['tyrannosaurus']['classification'], dinosaurs['tyrannosaurus']['dino_type'] )
 
 # Change the name of our T-Rex
-T_Rex.custom_name = "T-Bone"
+Richies_T_Rex.custom_name = "T-Bone"
 
-#print(repr(T_Rex))
-#print(repr(Richies_T_Rex))
+
+# set the attack and defense
+T_Rex.set_combat_stats(
+    dinosaurs['tyrannosaurus']['combat_stats']['attack'],
+    dinosaurs['tyrannosaurus']['combat_stats']['defense'],
+    dinosaurs['tyrannosaurus']['combat_stats']['health']
+)
+
+Richies_T_Rex.set_combat_stats(
+    dinosaurs['tyrannosaurus']['combat_stats']['attack'],
+    dinosaurs['tyrannosaurus']['combat_stats']['defense'],
+    dinosaurs['tyrannosaurus']['combat_stats']['health']
+)
+
 # add a dinosaur to the players team
 
 # view player
 jeff.add_dino(T_Rex)
 jeff.add_dino(Richies_T_Rex)
-print(repr(jeff))
+
 
 
 # Test combat engine
+attacking_test = jeff.dino_team[0]
+defending_test = jeff.dino_team[1]
 
+
+
+
+print("\nPRE-COMBAT\n")
+print(attacking_test, defending_test)
+
+
+# run combat engine
+
+combat_phase_trigger(attacking_test, defending_test)
+print("\nPOST COMBAT\n")
+print(attacking_test, defending_test)

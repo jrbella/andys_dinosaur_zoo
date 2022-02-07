@@ -1,13 +1,15 @@
 dinosaurs = {}
 
-def create_dinosaur_dictionary(name, scientific_name, classification, type, combat_stats):
+def print_dino_dictionary(dinosaurs):
+    print(dinosaurs)
+
+def create_dinosaur_dictionary(name, scientific_name, classification, dino_type, combat_stats):
         # combat stats should be an array...for now?
-        temp_name = name
         temp_name = {
             name : {
                 'scientific_name' : scientific_name,
                 'classification' : classification,
-                'type' : type,
+                'dino_type' : dino_type,
                 'combat_stats' : {
                     'attack' : combat_stats[0],
                     'defense' : combat_stats[1],
@@ -31,4 +33,5 @@ dino_list = [
 for dino in dino_list:
     dinosaurs.update(create_dinosaur_dictionary(dino[0], dino[1], dino[2], dino[3], dino[4]))
     
-print(dinosaurs)
+# execution
+print_dino_dictionary(dinosaurs)

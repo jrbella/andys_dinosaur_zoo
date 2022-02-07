@@ -31,8 +31,7 @@ class CombatStats:
 
     # repr
     def __repr__(self) -> str:
-        output = "Attack Number: " + self.attack_number + "\n Defense Number : " + self.defense_number 
-        + "\n Health Number : " + self.health_number
+        output = "Attack Number: " + str(self.attack_number) + "\n Defense Number : " + str(self.defense_number ) + "\n Health Number : " + str(self.health_number)
         return output
     
     # set the max health
