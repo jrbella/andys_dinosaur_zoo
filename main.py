@@ -3,6 +3,7 @@ from andy_dinosaur import Dinosaur
 from andy_player import Player
 from andy_dinosaur_type import DinosaurType
 from location_dictionary import location_dictionary
+from combat_engine import *
 
 
 
@@ -31,4 +32,6 @@ jeff.add_dino(T_Rex)
 jeff.add_dino(Richies_T_Rex)
 print(repr(jeff))
 
+
+# Test combat engine
 
