@@ -1,6 +1,3 @@
-
-
-
 dinosaurs = {}
 
 def create_dinosaur_dictionary(name, scientific_name, classification, type, combat_stats):
@@ -20,7 +17,6 @@ def create_dinosaur_dictionary(name, scientific_name, classification, type, comb
         }
         return temp_name
 
- 
 
 # default combat list, mountain + 1 attack, grassland + 1 health, marine + 1 defense
 dino_list = [
@@ -35,7 +31,4 @@ dino_list = [
 for dino in dino_list:
     dinosaurs.update(create_dinosaur_dictionary(dino[0], dino[1], dino[2], dino[3], dino[4]))
     
-
-
-
 print(dinosaurs)
