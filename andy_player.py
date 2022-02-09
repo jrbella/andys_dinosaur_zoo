@@ -40,5 +40,5 @@ class Player:
         else:
             print("could not add dinosaur because the team is full")
             # placeholder value
-            return False
+            return "Failed to add the dinosaur to the team because the team is full"
     

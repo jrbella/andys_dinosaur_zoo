@@ -33,4 +33,4 @@ class Location:
             
             # dinosaur.combat_stats, this heals the dino team
             for dino in dino_team:
-                dino.combat_stats.set_max_health()
+                dino.set_max_health()

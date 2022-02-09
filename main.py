@@ -5,6 +5,7 @@ from andy_dinosaur_type import DinosaurType
 from location_dictionary import location_dictionary
 from combat_engine import *
 from dinosaur_dictionary import *
+from dinosaur_capture_engine import *
 
 
 
@@ -55,13 +56,14 @@ defending_test = jeff.dino_team[1]
 
 
 
-
-print("\nPRE-COMBAT\n")
-print(attacking_test, defending_test)
-
-
 # run combat engine
 
-combat_phase_trigger(attacking_test, defending_test)
-print("\nPOST COMBAT\n")
-print(attacking_test, defending_test)
+combat_turn_trigger(attacking_test, defending_test)
+capture_trigger(jeff, defending_test)
+combat_turn_trigger(attacking_test, defending_test)
+capture_trigger(jeff, defending_test)
+combat_turn_trigger(attacking_test, defending_test)
+capture_trigger(jeff, defending_test)
+
+
+

@@ -22,12 +22,12 @@ def create_dinosaur_dictionary(name, scientific_name, classification, dino_type,
 
 # default combat list, mountain + 1 attack, grassland + 1 health, marine + 1 defense
 dino_list = [
-    ["tyrannosaurus", "Tyrannosaurus", "Carnivore", "Mountain", [3, 2, 5]],
-    ["stegosaurus", "Stegosaurus", "Herbivore", "Grassland", [2, 2, 6]],
-    ["triceratops", "Triceratops", "Herbivore", "Grassland", [2, 2, 6]],
-    ["spinasaurus", "Spinasaurus", "Carnivore", "Marine", [2, 3, 5]],
-    ["velociraptor", "Velociratpor", "Carnivore", "Mountain", [3, 2, 5]],
-    ["carnitaurus", "Carnitaurus", "Carnivore", "Grassland", [2, 2, 6]]
+    ["tyrannosaurus", "Tyrannosaurus", "Carnivore", "Mountain", [3, 2, 50]],
+    ["stegosaurus", "Stegosaurus", "Herbivore", "Grassland", [2, 2, 60]],
+    ["triceratops", "Triceratops", "Herbivore", "Grassland", [2, 2, 60]],
+    ["spinasaurus", "Spinasaurus", "Carnivore", "Marine", [2, 3, 50]],
+    ["velociraptor", "Velociratpor", "Carnivore", "Mountain", [3, 2, 50]],
+    ["carnitaurus", "Carnitaurus", "Carnivore", "Grassland", [2, 2, 60]]
 ]
 
 for dino in dino_list:
